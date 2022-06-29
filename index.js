@@ -88,60 +88,13 @@ inquirer
     email
 })=>{
     
-const template = `# {title}
-
-## Description
-${description}
-
-## Table of Contents
-
-* [Installation](#installation)
-* [Usage](#usage)
-* [Credits](#credits)
-* [License](#license)
-* [Contributions](#contributions)
-* [Tests](#tests)
-* [Questions](#questions)
-
-# Installation
-${installation}
-
-## Usage
-${usage}
-
-## Credits
-${credits}
-
-## License
-${license}
-
-## Contributions
-${contributions}
-
-## Tests
-${tests}
-
-## Questions
-* GitHub: ${gitname}
-* E-Mail: ${email}`;
 
 }
 )
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
-// function to create our readme using fs
-// createNewFile(title, template);
 
-//creating our createnewfile function
-//function createnewfile(filename, data)
-//fs
-//fs.writeFile('./${fileName.toLowerCase().split(' ').join('')}.md',data, ()=>{
-    // if(err){
-        //console.log(err);
-    //}
-    //console.log('README complete!');
-//}
 
 // TODO: Create a function to initialize app
 function init() {}
