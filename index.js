@@ -41,13 +41,14 @@ inquirer
         {
             type: 'input',
             message: 'List your collaborators, if any, with links to their GitHub profiles. If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section. If you followed tutorials, include links to those here as well. ',
-            name: 'Credits',
+            name: 'credits',
             validate: (value)=>{ if(value){return true} else {return "This answer is required!"}}
         },
         {
-            type: 'input',
+            type: 'list',
             message: 'Please input your license type.',
             name: 'license',
+            choices: ['The MIT License', 'The GPL License', 'Apache License', 'GNU License', 'N/A'],
             validate: (value)=>{ if(value){return true} else {return "This answer is required!"}}
         },
         {
@@ -61,15 +62,32 @@ inquirer
             message: 'Go the extra mile and write tests for your application. Then provide examples on how to run them here.',
             name: 'tests',
             validate: (value)=>{ if(value){return true} else {return "This answer is required!"}}
+        },
+        {
+            type: 'input',
+            message: 'Enter your GitHub username.',
+            name: 'gitname',
+            validate: (value)=>{ if(value){return true} else {return "This answer is required!"}}
+        },
+        {
+            type: 'input',
+            message: 'Enter your email, in case users have additional questions.',
+            name: 'email',
+            validate: (value)=>{ if(value){return true} else {return "This answer is required!"}}
         }
-
-
-
-    ])
-// .then(({
-    // all the questions
-//}) => {
-/* 
+    ]
+).then(({
+    title,
+    installation,
+    usage,
+    credits,
+    license,
+    contributions,
+    tests,
+    gitname,
+    email
+})=>{
+    
 const template = `# {title}
 
 ## Description
@@ -104,10 +122,11 @@ ${contributions}
 ${tests}
 
 ## Questions
-${questions}`
+* GitHub: ${gitname}
+* E-Mail: ${email}`;
 
 }
-) */
+)
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
