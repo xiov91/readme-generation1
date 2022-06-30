@@ -1,4 +1,4 @@
-const template = `# {title}
+`# ${title}
 
 ## Description
 ${description}
@@ -33,4 +33,6 @@ ${tests}
 
 ## Questions
 * GitHub: ${gitname}
-* E-Mail: ${email}`;
+* E-Mail: ${email}
+
+`;
