@@ -4,20 +4,6 @@ const fs = require('fs');
 const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
-/* const questions = [
-     // type: input to add your own text,
-    // message: the question posed,
-    // name: like a class or id almost,
-    //validate: used to make sure something is input when it's necessary
-
-    // OR
-
-    // type: checkbox to pick multiple options,
-    // message: the question posed,
-    // name: like a class or id almost,
-    // choices: ['has', 'to', 'be', 'an', 'array'] 
-
-]*/
 
 const questions = [
     {
@@ -75,38 +61,26 @@ const questions = [
         name: 'email',
         validate: (value) => { if (value) { return true } else { return "This answer is required!" } }
     }
-];
-
-/* .then(({
-    title,
-    installation,
-    usage,
-    credits,
-    license,
-    contributions,
-    tests,
-    gitname,
-    email
- })=>{
-    
-
-}
-)*/
+    ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
     return generateMarkdown(fileName, data);
- }
+}
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt([...questions]).then((answers) => {
+        console.log('Answers', answers);
         var fileInfo = writeToFile(answers.title, answers);
-        fs.writeFile(answers.title, fileInfo, (//err stuff =>))
-        
-    }
+        fs.writeFile(answers.title, fileInfo, (err => {
+            if (err) {
+                console.log(err)
+            }
+        })
 
-    )
+        );
+     });
 };
 
 // Function call to initialize app
