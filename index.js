@@ -73,7 +73,7 @@ function init() {
     inquirer.prompt([...questions]).then((answers) => {
         console.log('Answers', answers);
         var fileInfo = writeToFile(answers.title, answers);
-        fs.writeFile(answers.title, fileInfo, (err => {
+        fs.writeFile(answers.title+'.md', fileInfo, (err => {
             if (err) {
                 console.log(err)
             }
