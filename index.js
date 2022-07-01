@@ -14,6 +14,12 @@ const questions = [
     },
     {
         type: 'input',
+        message: 'Describe your project.',
+        name: 'description',
+        validate: (value) => { if (value) { return true } else { return "This answer is required!" } }
+    },
+    {
+        type: 'input',
         message: 'What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.',
         name: 'installation',
         validate: (value) => { if (value) { return true } else { return "This answer is required!" } }
@@ -40,7 +46,7 @@ const questions = [
     {
         type: 'input',
         message: 'Include guidelines for how other users can contribute!',
-        name: 'contribution',
+        name: 'contributions',
         validate: (value) => { if (value) { return true } else { return "This answer is required!" } }
     },
     {
@@ -64,16 +70,16 @@ const questions = [
     ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    return generateMarkdown(fileName, data);
+function writeToFile(data) {
+    return generateMarkdown(data);
 }
 
 // TODO: Create a function to initialize app
 function init() {
     inquirer.prompt([...questions]).then((answers) => {
         console.log('Answers', answers);
-        var fileInfo = writeToFile(answers.title, answers);
-        fs.writeFile(answers.title+'.md', fileInfo, (err => {
+        var fileInfo = writeToFile(answers);
+        fs.writeFile("README.md", fileInfo, (err => {
             if (err) {
                 console.log(err)
             }
