@@ -1,35 +1,19 @@
-# README Generator
+# Take Note!
  
   ## Description
-  This is a Node.js program that gives questions via Inquirer and outputs the answers given as a README in the proper Markdown format and filetype.
+  Take Notes is an exercise in Express.js, creating server routes that can store and receive information in the form of written notes. The javascript functionality was pre-written, but everything server-side was made by me.
   
   ## Table of Contents
   
   * [Installation](#installation)
-  * [Usage](#usage)
-  * [Credits](#credits)
-  * [License](#license)
   * [Contributions](#contributions)
-  * [Tests](#tests)
   * [Questions](#questions)
   
-  # Installation
-  1. Make sure you have Inquirer installed onto your terminal. 2. Download the files from GitHub. 3. Run "node index.js" 4. Answer the prompts 5. View your README that is generated!
-  
-  ## Usage
-  See above, whoops.
-  
-  ## Credits
-  I had no collaborators that I can link. I worked with my tutor, AskBCS, and my teacher and teacher's aide.
-  
-  ## License
-  N/A
+  # Installation and Usage
+  1. Run 'NPM install' 2. Run 'NPM start' to boot up the server. 3. 'http://localhost:3001/' will access the landing page, then you can get started and create notes, saving them with the little icon in the corner.
   
   ## Contributions
-  I'm not sure if there's anything to add, but if you'd like to become a contributor, email me and I can add you into the GitHub Repo project.
-  
-  ## Tests
-  There will be no tests written for this project.
+  There are functionality improvements that definitely need to be adjusted. The JavaScript doesn't seem to want to display the note array on the sidebar as it should, despite being set up to do so. Also, the JavaScript is set up for a delete button functionality, but that's not wired to the server yet.
   
   ## Questions
   * GitHub: xiov91
