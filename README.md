@@ -5,7 +5,7 @@
   
   ## Table of Contents
   
-  * [Installation/Usage](#installation)
+  * [Installation/Usage](#installation/usage)
   * [Credits](#credits)
   * [License](#license)
   * [Contributions](#contributions)
