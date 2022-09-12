@@ -1,35 +1,31 @@
-# Make Tracks
+# ReadMe Generation
  
   ## Description
-  Make Tracks is an employee tracker that employs the use of Inquirer and MySQL. A database of employees and managers is created and can be used to view and add to the various tables.
+  ReadMe Generation is a from-scratch built CLI program that inquires and compiles information into a README.md file. Born from Node.js and Inquirer, this exports the given information into a properly formatted file.
   
   ## Table of Contents
   
-  * [Installation](#installation)
-  * [Usage](#usage)
+  * [Installation/Usage](#installation)
   * [Credits](#credits)
   * [License](#license)
   * [Contributions](#contributions)
   * [Tests](#tests)
   * [Questions](#questions)
   
-  # Installation
-  NPM init >> NPM install inquirer mysql2 console-table
-  
-  ## Usage
-  You can run it with the command "node index.js"
+  # Installation/Usage
+  1. Make sure you have Inquirer installed onto your terminal. 2. Download the files from GitHub. 3. Run "node index.js" 4. Answer the prompts 5. View your README that is generated!
   
   ## Credits
-  N/A
+  I had no collaborators that I can link. I worked with my tutor, AskBCS, and my teacher and teacher's aide.
   
   ## License
   N/A
   
   ## Contributions
-  N/A
+  I'm not sure if there's anything to add, but if you'd like to become a contributor, email me and I can add you into the GitHub Repo project.
   
   ## Tests
-  No tests were included in this program
+  There will be no tests written for this project.
   
   ## Questions
   * GitHub: xiov91
