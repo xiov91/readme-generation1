@@ -1,4 +1,5 @@
 # ReadMe Generation
+![screenshot](readme.jpg)
  
   ## Description
   ReadMe Generation is a from-scratch built CLI program that inquires and compiles information into a README.md file. Born from Node.js and Inquirer, this exports the given information into a properly formatted file.
